@@ -23,5 +23,9 @@ require("lazy").setup({
       "MunifTanjim/nui.nvim",
       -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     },
-}
+  },
+  {
+    'nvim-telescope/telescope.nvim', tag = '0.1.6',
+      dependencies = { 'nvim-lua/plenary.nvim' }
+  }
 })

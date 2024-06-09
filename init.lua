@@ -1,5 +1,6 @@
 require("punkmonk")
 
+-- This has to be DUPLICATED here ( for now ) or it stops working fml
 vim.cmd([[
 
 autocmd FileType * set formatoptions-=ro
@@ -48,8 +49,9 @@ hi! Statement gui=NONE ctermfg=blue " links Conditional, Repeat, Label, Operator
 " Whatever. It's fixed.
 
 " Neotree
-hi! NeoTreeNormal ctermfg=green ctermbg=black
+hi! NeoTreeNormal ctermfg=green ctermbg=none
 hi! NeoTreeNormalNC ctermfg=green ctermbg=none
 hi! NeoTreeEndOfBuffer ctermfg=green ctermbg=none
 
 ]])
+
