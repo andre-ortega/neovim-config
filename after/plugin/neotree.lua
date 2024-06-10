@@ -11,7 +11,6 @@ require('neo-tree').setup({
       mappings = {
         ["-"] = "navigate_up",
         ["h"] = "navigate_up",
-        ["l"] = "set_root",
         ["H"] = "",
         ["/"] = "",
         ["f"] = "fuzzy_finder",

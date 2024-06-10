@@ -1,0 +1,9 @@
+treesitter error
+
+run command to ensure only treesitter runtime
+file is here:
+
+  echo nvim_get_runtime_file('parser', v:true)
+
+Then remove/delete/rename the one outside the
+treesitter path

@@ -76,6 +76,11 @@ hi! CursorLineNr gui=NONE ctermbg=blue
 hi! Statement gui=NONE ctermfg=blue " links Conditional, Repeat, Label, Operator, Keyword, Exception
 " Whatever. It's fixed.
 
+" Neotree
+hi! NeoTreeNormal ctermfg=green ctermbg=black
+hi! NeoTreeNormalNC ctermfg=green ctermbg=black
+hi! NeoTreeEndOfBuffer ctermfg=green ctermbg=black
+
 ]])
 
 -- Telescope

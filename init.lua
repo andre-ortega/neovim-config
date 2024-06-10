@@ -49,9 +49,9 @@ hi! Statement gui=NONE ctermfg=blue " links Conditional, Repeat, Label, Operator
 " Whatever. It's fixed.
 
 " Neotree
-hi! NeoTreeNormal ctermfg=green ctermbg=none
-hi! NeoTreeNormalNC ctermfg=green ctermbg=none
-hi! NeoTreeEndOfBuffer ctermfg=green ctermbg=none
+hi! NeoTreeNormal ctermfg=green ctermbg=black
+hi! NeoTreeNormalNC ctermfg=green ctermbg=black
+hi! NeoTreeEndOfBuffer ctermfg=green ctermbg=black
 
 ]])
 
