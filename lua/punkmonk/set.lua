@@ -43,7 +43,7 @@ hi! TabLineSel ctermfg=black ctermbg=green cterm=NONE
 hi! Search ctermbg=green ctermfg=black cterm=NONE
 hi! IncSearch ctermbg=magenta ctermfg=black cterm=NONE
 
-hi! ColorColumn ctermbg=blue
+hi! ColorColumn ctermbg=black
 hi! TabLine ctermfg=green ctermbg=black
 hi! Visual ctermfg=black ctermbg=magenta
 
@@ -88,7 +88,7 @@ hi! NeoTreeEndOfBuffer ctermfg=green ctermbg=black
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>t', builtin.find_files, {})
 vim.keymap.set('n', '<C-p>', builtin.git_files, {})
-vim.keymap.set('n', '<leader>ts', function()
+vim.keymap.set('n', '<leader>g', function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end)
 
