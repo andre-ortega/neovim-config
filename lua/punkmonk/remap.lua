@@ -8,6 +8,12 @@ vim.keymap.set("n", "<leader><leader>", vim.cmd.Ex)
 --vim.keymap.set("n", "<leader>p", [[:set ft=python<CR>]], { noremap = true, silent = true })
 --vim.keymap.set("n", "<leader>j", [[:set ft=javascript<CR>]], { noremap = true, silent = true })
 
+-- Clear search
+vim.keymap.set("n", "<leader>n", ":noh<cr>")
+
+-- Fast exit
+vim.keymap.set("n", "<leader><Esc>", ":qa<cr>")
+
 -- Spawn newlines above/below
 vim.keymap.set("n", "<leader>O", "O<Esc>j")
 vim.keymap.set("n", "<leader>o", "o<Esc>k")
