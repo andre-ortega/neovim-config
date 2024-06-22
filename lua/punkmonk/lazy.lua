@@ -9,6 +9,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     lazypath,
   })
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
@@ -47,7 +48,7 @@ require("lazy").setup({
         dashboard.button("n", " " .. " New file",        "<cmd> ene <BAR> startinsert <cr>"),
         dashboard.button("r", " " .. " Recent files",    "<cmd> Telescope oldfiles <cr>"),
         dashboard.button("g", " " .. " Find text",       "<cmd> Telescope live_grep <cr>"),
-        dashboard.button("c", " " .. " Config",          "<cmd> lua require('lazyvim.util').telescope.config_files()() <cr>"),
+        dashboard.button("c", " " .. " Config",          "<cmd> Neotree action=focus source=filesystem position=left toggle=true dir=$HOME/.config/nvim <cr>"),
         dashboard.button("s", " " .. " Restore Session", [[<cmd> lua require("persistence").load() <cr>]]),
         dashboard.button("x", " " .. " Lazy Extras",     "<cmd> LazyExtras <cr>"),
         dashboard.button("l", "󰒲 " .. " Lazy",            "<cmd> Lazy <cr>"),
