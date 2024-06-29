@@ -59,7 +59,7 @@ hi! question ctermfg=green guifg=green
 hi! Folded ctermfg=green ctermbg=grey guifg=black guibg=grey
 hi! FoldColumn ctermfg=green ctermbg=grey guifg=black guibg=grey
 
-hi! StatusLIne ctermfg=green ctermbg=black
+hi! StatusLine ctermfg=green ctermbg=black
 hi! ErrorMsg ctermfg=magenta ctermbg=black
 
 set tabline="ctermfg=green ctermbg=black %T"
