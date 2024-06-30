@@ -71,15 +71,19 @@ set tabline="ctermfg=green ctermbg=black %T"
 " reddit.com/neovim/comments/nnwfvp/why_is_neovim_rendering_fonts_in_different_weight
 set background=light
 
-hi! LineNr gui=NONE ctermfg=blue "links LineNrAbove, LineNrBelow    
+hi! LineNr gui=NONE ctermfg=yellow "links LineNrAbove, LineNrBelow    
 hi! CursorLineNr gui=NONE ctermbg=blue
 hi! Statement gui=NONE ctermfg=blue " links Conditional, Repeat, Label, Operator, Keyword, Exception
 " Whatever. It's fixed.
 
 " Neotree
-hi! NeoTreeNormal ctermfg=green ctermbg=black
-hi! NeoTreeNormalNC ctermfg=green ctermbg=black
-hi! NeoTreeEndOfBuffer ctermfg=green ctermbg=black
+hi! NeoTreeNormal ctermfg=green ctermbg=none
+hi! NeoTreeNormalNC ctermfg=green ctermbg=none
+hi! NeoTreeEndOfBuffer ctermfg=green ctermbg=none
 
 ]])
 
+vim.api.nvim_set_hl(0, "FloatBorder", { ctermbg="white", ctermfg="white" })
+vim.api.nvim_set_hl(0, "NormalFloat", { ctermfg="white", ctermbg="black" })
+vim.api.nvim_set_hl(0, "FloatTitle", { ctermfg="green", ctermbg="black" })
+vim.api.nvim_set_hl(0, "FloatFooter", { ctermfg="green", ctermbg="black" })

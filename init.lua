@@ -53,8 +53,9 @@ hi! NeoTreeNormal ctermfg=green ctermbg=none
 hi! NeoTreeNormalNC ctermfg=green ctermbg=none
 hi! NeoTreeEndOfBuffer ctermfg=green ctermbg=none
 
-" Popup Windows
-hi! NormalFloat ctermfg=white ctermbg=black
-
 ]])
 
+vim.api.nvim_set_hl(0, "FloatBorder", { ctermbg="none", ctermfg="white" })
+vim.api.nvim_set_hl(0, "NormalFloat", { ctermfg="white", ctermbg="none" })
+vim.api.nvim_set_hl(0, "FloatTitle", { ctermfg="green", ctermbg="black" })
+vim.api.nvim_set_hl(0, "FloatFooter", { ctermfg="green", ctermbg="black" })
