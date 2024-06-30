@@ -5,64 +5,56 @@ local has_words_before = function()
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match('%s') == nil
 end
 
-local cmp = require('cmp')
-cmp.setup {
-  -- ... Your other configuration ...
-
+-- Completion Plugin Setup
+local cmp = require'cmp'
+cmp.setup({
+  -- Enable LSP snippets
+  snippet = {
+    expand = function(args)
+        vim.fn["vsnip#anonymous"](args.body)
+    end,
+  },
   mapping = {
-
-    -- ... Your other configuration ...
-
-    ['<C-Space>'] = cmp.mapping.confirm {
+    ['<C-p>'] = cmp.mapping.select_prev_item(),
+    ['<C-n>'] = cmp.mapping.select_next_item(),
+    -- Add tab support
+    ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+    ['<Tab>'] = cmp.mapping.select_next_item(),
+    ['<C-S-f>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.close(),
+    ['<CR>'] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Insert,
       select = true,
-    },
-
-    ['<Tab>'] = function(fallback)
-      if not cmp.select_next_item() then
-        if vim.bo.buftype ~= 'prompt' and has_words_before() then
-          cmp.complete()
-        else
-          fallback()
-        end
-      end
-    end,
-
-    ['<S-Tab>'] = function(fallback)
-      if not cmp.select_prev_item() then
-        if vim.bo.buftype ~= 'prompt' and has_words_before() then
-          cmp.complete()
-        else
-          fallback()
-        end
-      end
-    end,
+    })
   },
-
-  snippet = {
-    -- We recommend using *actual* snippet engine.
-    -- It's a simple implementation so it might not work in some of the cases.
-    expand = function(args)
-      unpack = unpack or table.unpack
-      local line_num, col = unpack(vim.api.nvim_win_get_cursor(0))
-      local line_text = vim.api.nvim_buf_get_lines(0, line_num - 1, line_num, true)[1]
-      local indent = string.match(line_text, '^%s*')
-      local replace = vim.split(args.body, '\n', true)
-      local surround = string.match(line_text, '%S.*') or ''
-      local surround_end = surround:sub(col)
-
-      replace[1] = surround:sub(0, col - 1)..replace[1]
-      replace[#replace] = replace[#replace]..(#surround_end > 1 and ' ' or '')..surround_end
-      if indent ~= '' then
-        for i, line in ipairs(replace) do
-          replace[i] = indent..line
-        end
-      end
-
-      vim.api.nvim_buf_set_lines(0, line_num - 1, line_num, true, replace)
-    end,
+  -- Installed sources:
+  sources = {
+    { name = 'path' },                              -- file paths
+    { name = 'nvim_lsp', keyword_length = 3 },      -- from language server
+    { name = 'nvim_lsp_signature_help'},            -- display function signatures with current parameter emphasized
+    { name = 'nvim_lua', keyword_length = 2},       -- complete neovim's Lua runtime API such vim.lsp.*
+    { name = 'buffer', keyword_length = 2 },        -- source current buffer
+    { name = 'vsnip', keyword_length = 2 },         -- nvim-cmp source for vim-vsnip 
+    { name = 'calc'},                               -- source for math calculation
   },
-
-  -- ... Your other configuration ...
-}
+  window = {
+      completion = cmp.config.window.bordered(),
+      documentation = cmp.config.window.bordered(),
+  },
+  formatting = {
+      fields = {'menu', 'abbr', 'kind'},
+      format = function(entry, item)
+          local menu_icon ={
+              nvim_lsp = 'λ',
+              vsnip = '⋗',
+              buffer = 'Ω',
+              path = '🖫',
+          }
+          item.menu = menu_icon[entry.source.name]
+          return item
+      end,
+  },
+})
 
