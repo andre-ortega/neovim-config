@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls" }
+  ensure_installed = { "lua_ls", "rust_analyzer", "markdown_oxide", "autotools_ls", "clangd", "basedpyright", "html", "dockerls", "cssls", "bashls" }
 })
 
 local on_attach = function(_, _)
@@ -37,18 +37,18 @@ rt.setup({
 
 local _border = "single"
 
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
-  vim.lsp.handlers.hover, {
-    border = _border
-  }
-)
-
-vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
-  vim.lsp.handlers.signature_help, {
-    border = _border
-  }
-)
-
-vim.diagnostic.config{
-  float={border=_border}
-}
+--vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+--  vim.lsp.handlers.hover, {
+--    border = _border
+--  }
+--)
+--
+--vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
+--  vim.lsp.handlers.signature_help, {
+--    border = _border
+--  }
+--)
+--
+--vim.diagnostic.config{
+--  float={border=_border}
+--}

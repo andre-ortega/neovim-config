@@ -11,7 +11,7 @@ vim.keymap.set("n", "<leader><leader>", vim.cmd.Ex)
 -- Clear search
 vim.keymap.set("n", "<leader>n", ":noh<cr>")
 
--- Fast exit
+-- Fast escape
 vim.keymap.set("n", "<leader><Esc>", ":qa<cr>")
 
 -- Spawn newlines above/below
