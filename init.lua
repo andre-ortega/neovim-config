@@ -43,7 +43,7 @@ set tabline="ctermfg=green ctermbg=black %T"
 " reddit.com/neovim/comments/nnwfvp/why_is_neovim_rendering_fonts_in_different_weight
 set background=light
 
-hi! LineNr gui=NONE ctermfg=blue "links LineNrAbove, LineNrBelow    
+hi! LineNr gui=NONE ctermfg=yellow "links LineNrAbove, LineNrBelow    
 hi! CursorLineNr gui=NONE ctermbg=blue
 hi! Statement gui=NONE ctermfg=blue " links Conditional, Repeat, Label, Operator, Keyword, Exception
 " Whatever. It's fixed.
@@ -53,6 +53,7 @@ hi! NeoTreeNormal ctermfg=green ctermbg=none
 hi! NeoTreeNormalNC ctermfg=green ctermbg=none
 hi! NeoTreeEndOfBuffer ctermfg=green ctermbg=none
 
+" Popup Windows
 hi! NormalFloat ctermfg=white ctermbg=black
 
 ]])
