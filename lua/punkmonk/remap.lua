@@ -31,4 +31,4 @@ vim.keymap.set("n", "<leader>rc", "i/*<cr>/<Esc>k$a<space>")
 
 -- neotree
 vim.keymap.set("n", "<leader>e", ":Neotree focus<cr>" )
-vim.keymap.set("n", "<leader>x", ":Neotree toggle<cr>" )
+vim.keymap.set("n", "<leader><cr>", ":Neotree toggle<cr>" )

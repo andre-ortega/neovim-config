@@ -53,5 +53,7 @@ hi! NeoTreeNormal ctermfg=green ctermbg=none
 hi! NeoTreeNormalNC ctermfg=green ctermbg=none
 hi! NeoTreeEndOfBuffer ctermfg=green ctermbg=none
 
+hi! NormalFloat ctermfg=white ctermbg=black
+
 ]])
 
