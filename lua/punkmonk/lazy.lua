@@ -51,13 +51,13 @@ require("lazy").setup({
     opts = function()
       local dashboard = require("alpha.themes.dashboard")
       local logo = [[
-  ███████╗ █████╗ ██████╗  █████╗ ██╗   ██╗
-  ██╔════╝██╔══██╗██╔══██╗██╔══██╗██║   ██║
-  ███████╗███████║██████╔╝███████║██║   ██║
-  ╚════██║██╔══██║██╔══██╗██╔══██║╚██╗ ██╔╝
-  ███████║██║  ██║██║  ██║██║  ██║ ╚████╔╝ 
-  ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝  ╚═══╝  
-      ]]
+ ╔══════╗ ╔════╗ ╔═════╗  ╔════╗    ╔═╗   ╔═╗
+ ║ ╔════╝╔╝╔══╗╚╗║ ╔══╗╚╗╔╝╔══╗╚╗   ║ ║   ║ ║
+ ║ ╚════╗║ ╚══╝ ║║ ╚══╝╔╝║ ╚══╝ ║   ║ ║   ║ ║
+ ╚════╗ ║║ ╔══╗ ║║ ╔══╗╚╗║ ╔══╗ ║   ╚╗╚╗ ╔╝╔╝
+ ╔════╝ ║║ ║  ║ ║║ ║  ║ ║║ ║  ║ ║    ╚╗╚═╝╔╝
+ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝     ╚═══╝
+    ]]
 
       dashboard.section.header.val = vim.split(logo, "\n")
       -- stylua: ignore
@@ -129,6 +129,7 @@ require("lazy").setup({
     "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-nvim-lua",
+--    "hrsh7th/cmp-vsnip",
     "hrsh7th/cmp-vsnip",
     "hrsh7th/cmp-nvim-lsp-signature-help",
     "hrsh7th/cmp-path",

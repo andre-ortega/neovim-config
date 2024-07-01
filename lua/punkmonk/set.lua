@@ -56,8 +56,8 @@ hi! specialkey ctermfg=green guifg=green
 hi! underlined ctermfg=green guifg=green
 hi! question ctermfg=green guifg=green
 
-hi! Folded ctermfg=green ctermbg=grey guifg=black guibg=grey
-hi! FoldColumn ctermfg=green ctermbg=grey guifg=black guibg=grey
+hi! Folded ctermfg=green ctermbg=black guifg=black guibg=black
+hi! FoldColumn ctermfg=green ctermbg=black guifg=black guibg=black
 
 hi! StatusLine ctermfg=green ctermbg=black
 hi! ErrorMsg ctermfg=magenta ctermbg=black
@@ -81,9 +81,14 @@ hi! NeoTreeNormal ctermfg=green ctermbg=none
 hi! NeoTreeNormalNC ctermfg=green ctermbg=none
 hi! NeoTreeEndOfBuffer ctermfg=green ctermbg=none
 
+" Don't open folds when navigating with { and }
+set foldopen -=block
+set so=999
 ]])
 
 vim.api.nvim_set_hl(0, "FloatBorder", { ctermbg="white", ctermfg="white" })
 vim.api.nvim_set_hl(0, "NormalFloat", { ctermfg="white", ctermbg="black" })
 vim.api.nvim_set_hl(0, "FloatTitle", { ctermfg="green", ctermbg="black" })
 vim.api.nvim_set_hl(0, "FloatFooter", { ctermfg="green", ctermbg="black" })
+
+
