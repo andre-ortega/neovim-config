@@ -11,9 +11,6 @@ vim.keymap.set("n", "<leader><leader>", vim.cmd.Ex)
 -- Clear search
 vim.keymap.set("n", "<leader>n", ":noh<cr>")
 
--- Fast escape
-vim.keymap.set("n", "<leader><Esc>", ":qa<cr>")
-
 -- Spawn newlines above/below
 vim.keymap.set("n", "<leader>O", "O<Esc>j")
 vim.keymap.set("n", "<leader>o", "o<Esc>k")

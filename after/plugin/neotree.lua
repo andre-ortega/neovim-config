@@ -13,6 +13,7 @@ require('neo-tree').setup({
         ["h"] = "navigate_up",
         ["H"] = "",
         ["/"] = "",
+        ["x"] = "",
         ["f"] = "fuzzy_finder",
         ["F"] = "filter_on_submit",
         ["e"] = "open"
