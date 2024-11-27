@@ -68,7 +68,7 @@ set tabline="ctermfg=green ctermbg=black %T"
 " .. because bold items are impossible to configure in highlight
 " Setting background=light seems to fix BUT changes the colors of 
 " other items to COLORS OUTSIDE COLORSCHEME :[
-" reddit.com/neovim/comments/nnwfvp/why_is_neovim_rendering_fonts_in_different_weight
+" reddit.com/r/neovim/comments/nnwfvp/why_is_neovim_rendering_fonts_in_different_weight
 set background=light
 
 hi! LineNr gui=NONE ctermfg=yellow "links LineNrAbove, LineNrBelow    
