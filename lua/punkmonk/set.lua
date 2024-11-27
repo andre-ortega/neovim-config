@@ -36,15 +36,15 @@ autocmd FileType * set formatoptions-=ro
 hi! clear
 colorscheme vim
 
-hi! TabLine ctermfg=black ctermbg=black cterm=NONE
-hi! TabLineFill ctermfg=black ctermbg=black cterm=NONE
+"hi! TabLine ctermfg=black ctermbg=NONE cterm=NONE
+hi! TabLine ctermfg=green ctermbg=NONE cterm=NONE
+hi! TabLineFill ctermfg=black ctermbg=NONE cterm=NONE
 hi! TabLineSel ctermfg=black ctermbg=green cterm=NONE
 
 hi! Search ctermbg=green ctermfg=black cterm=NONE
 hi! IncSearch ctermbg=magenta ctermfg=black cterm=NONE
 
 hi! ColorColumn ctermbg=black
-hi! TabLine ctermfg=green ctermbg=black
 hi! Visual ctermfg=black ctermbg=magenta
 
 hi! link SignColumn Normal
@@ -59,10 +59,10 @@ hi! question ctermfg=green guifg=green
 hi! Folded ctermfg=green ctermbg=black guifg=black guibg=black
 hi! FoldColumn ctermfg=green ctermbg=black guifg=black guibg=black
 
-hi! StatusLine ctermfg=green ctermbg=black
+hi! StatusLine ctermfg=green ctermbg=NONE cterm=NONE
 hi! ErrorMsg ctermfg=magenta ctermbg=black
 
-set tabline="ctermfg=green ctermbg=black %T"
+"set tabline="ctermfg=green ctermbg=black %T"
 
 " This is to simply disable BOLD fonts within nvim
 " .. because bold items are impossible to configure in highlight
