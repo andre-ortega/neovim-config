@@ -83,7 +83,8 @@ hi! NeoTreeEndOfBuffer ctermfg=green ctermbg=none
 
 " Don't open folds when navigating with { and }
 set foldopen -=block
-set so=999
+" set so=999
+set so=5
 ]])
 
 vim.api.nvim_set_hl(0, "FloatBorder", { ctermbg="white", ctermfg="white" })
