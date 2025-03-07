@@ -92,4 +92,8 @@ vim.api.nvim_set_hl(0, "NormalFloat", { ctermfg="white", ctermbg="black" })
 vim.api.nvim_set_hl(0, "FloatTitle", { ctermfg="green", ctermbg="black" })
 vim.api.nvim_set_hl(0, "FloatFooter", { ctermfg="green", ctermbg="black" })
 
-
+vim.filetype.add({
+  pattern = {
+    ['*.ejs'] = 'html',
+  },
+})

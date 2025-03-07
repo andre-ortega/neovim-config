@@ -1,6 +1,6 @@
 -- Treesitter Plugin Setup 
 require('nvim-treesitter.configs').setup {
-  ensure_installed = { "lua", "rust", "toml", "markdown", "c", "python", "html", "css", "javascript" },
+  ensure_installed = { "lua", "rust", "toml", "markdown", "c", "python", "html", "css", "javascript", "json" },
   auto_install = true,
   highlight = {
     enable = true,
@@ -14,3 +14,10 @@ require('nvim-treesitter.configs').setup {
   }
 }
 
+vim.filetype.add({
+    extension = {
+        ejs = "ejs"
+    }
+})
+
+vim.treesitter.language.register('html', { 'ejs' })
