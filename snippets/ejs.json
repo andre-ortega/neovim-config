@@ -1,0 +1,7 @@
+{
+  "a tag": {
+    "prefix": "at",
+    "body": "<a href=$1 target=none></a>",
+    "description": "Insert an <a> tag"
+  }
+}
