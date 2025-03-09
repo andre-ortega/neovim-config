@@ -5,3 +5,11 @@
     "description": "Insert an <a> tag"
   }
 }
+
+{
+  "span tag": {
+    "prefix": "as",
+    "body": "<span></span>",
+    "description": "Insert an <a> tag"
+  }
+}
