@@ -1,0 +1,12 @@
+{
+  "a tag": {
+    "prefix": "<a",
+    "body": "<a href=$1 target=none></a>",
+    "description": "Insert an <a> tag"
+  },
+  "span tag": {
+    "prefix": "<span",
+    "body": "<span>$1</span>",
+    "description": "Insert an <span> tag"
+  }
+}
