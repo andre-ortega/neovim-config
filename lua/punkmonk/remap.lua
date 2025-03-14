@@ -2,6 +2,7 @@ vim.cmd('ca vimrc /home/roe/.config/nvim/')
 vim.g.mapleader = " "
 vim.cmd('abb tn tabnew')
 vim.cmd('abb tm tabmove')
+vim.cmd('abb a Alpha')
 
 --vim.keymap.set("n", "<leader><leader>", vim.cmd.Ex)
 --vim.keymap.set("n", "<leader>p", vim.cmd([[:set syn=python]]))
