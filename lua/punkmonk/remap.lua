@@ -23,10 +23,6 @@ vim.keymap.set("i", "[<cr>","[<cr>]<c-o><s-o>")
 -- find these colorschemes
 --vim.cmd.colorscheme('habamax')
 
--- rustacean creations
-vim.keymap.set("n", "<leader>rp", "jOprintln!(\"\");<Esc>hhi")
-vim.keymap.set("n", "<leader>rc", "i/*<cr>/<Esc>k$a<space>")
-
 -- neotree
 vim.keymap.set("n", "<leader>e", ":Neotree focus<cr>" )
 vim.keymap.set("n", "<leader><cr>", ":Neotree toggle<cr>" )
