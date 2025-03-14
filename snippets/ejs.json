@@ -8,5 +8,20 @@
     "prefix": "<span",
     "body": "<span>$1</span>",
     "description": "Insert an <span> tag"
+  },
+  "li tag": {
+    "prefix": "<li",
+    "body": "<li>$1</li>",
+    "description": "Insert an <li> tag"
+  },
+  "tooltip": {
+    "prefix": "<spant",
+    "body": "<span class=hover-word data-tooltip=$1></span>",
+    "description": "Insert an <li> tag"
+  },
+  "comment": {
+    "prefix": "<!--",
+    "body": "<!-- $1 -->",
+    "description": "Insert comment"
   }
 }
