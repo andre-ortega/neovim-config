@@ -2,7 +2,7 @@ vim.cmd('ca vimrc /home/roe/.config/nvim/')
 vim.g.mapleader = " "
 vim.cmd('abb tn tabnew')
 vim.cmd('abb tm tabmove')
-vim.cmd('abb a Alpha')
+vim.cmd('abb al Alpha')
 
 --vim.keymap.set("n", "<leader><leader>", vim.cmd.Ex)
 --vim.keymap.set("n", "<leader>p", vim.cmd([[:set syn=python]]))
@@ -27,3 +27,4 @@ vim.keymap.set("i", "[<cr>","[<cr>]<c-o><s-o>")
 vim.keymap.set("n", "<leader>e", ":Neotree focus<cr>" )
 vim.keymap.set("n", "<leader><cr>", ":Neotree toggle<cr>" )
 vim.keymap.set("n", "<leader><leader>", ":Neotree toggle<cr>")
+
