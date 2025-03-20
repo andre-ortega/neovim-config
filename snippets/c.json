@@ -1,8 +1,13 @@
 
 {
-  "a tag": {
+  "for loop": {
     "prefix": "for",
     "body": "for(int i = 0; i < $1; i++){\n\n}",
     "description": "for loop"
+  },
+  "main": {
+    "prefix": "main",
+    "body": "#include <stdio.h>\n#include <stdlib.j>\n\nint main(int argc, char* argv[]) {\n\n\t$1\n\treturn 0;\n}",
+    "description": "main program"
   }
 }
