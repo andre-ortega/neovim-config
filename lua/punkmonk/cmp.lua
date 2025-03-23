@@ -56,6 +56,14 @@ cmp.setup({
           return item
       end,
   },
+  {
+  name = 'nvim_lsp',
+    option = {
+      markdown_oxide = {
+        keyword_pattern = [[\(\k\| \|\/\|#\)\+]]
+      }
+    }
+  },
 })
 
 vim.g.vsnip_snippet_dir = "~/.config/nvim/snippets"

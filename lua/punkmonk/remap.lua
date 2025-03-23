@@ -1,5 +1,8 @@
-vim.cmd('ca vimrc /home/roe/.config/nvim/')
+
 vim.g.mapleader = " "
+
+vim.cmd('ca vimrc /home/roe/.config/nvim/')
+
 vim.cmd('abb tn tabnew')
 vim.cmd('abb tm tabmove')
 vim.cmd('abb al Alpha')
@@ -19,9 +22,6 @@ vim.keymap.set("n", "<leader>o", "o<Esc>k")
 vim.keymap.set("i", "{<cr>","{<cr>}<c-o><s-o>")
 vim.keymap.set("i", "(<cr>","(<cr>)<c-o><s-o>")
 vim.keymap.set("i", "[<cr>","[<cr>]<c-o><s-o>")
-
--- find these colorschemes
---vim.cmd.colorscheme('habamax')
 
 -- neotree
 vim.keymap.set("n", "<leader>e", ":Neotree focus<cr>" )
