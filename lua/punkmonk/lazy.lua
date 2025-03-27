@@ -12,7 +12,7 @@
 --                   █       █       █
 --                               2025 PUNKMONK --
 
--- TODO: ADD HOOK FOR 4 LETTER WORD
+-- TODO: ADD HOOK 4 SECRET WORD
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -154,6 +154,14 @@ require("lazy").setup({
       'nvim-treesitter/nvim-treesitter', -- optional
       'nvim-tree/nvim-web-devicons',     -- optional
     }
-  }
+  },
+  {
+    "folke/noice.nvim",
+    opts = {
+      presets = {
+        lsp_doc_border = true,
+      },
+    },
+  },
 })
 
