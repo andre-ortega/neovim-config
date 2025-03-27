@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls", "rust_analyzer", "markdown_oxide", "autotools_ls", "clangd", "basedpyright" }
+  ensure_installed = { "lua_ls", "rust_analyzer", "autotools_ls", "clangd", "basedpyright" }
 })
 
 local on_attach = function(_, _)
@@ -108,19 +108,11 @@ local _border = "single"
 -- An example nvim-lspconfig capabilities setting
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-require("lspconfig").markdown_oxide.setup({
-    -- Ensure that dynamicRegistration is enabled! This allows the LS to take into account actions like the
-    -- Create Unresolved File code action, resolving completions for unindexed code blocks, ...
-    capabilities = vim.tbl_deep_extend(
-        'force',
-        capabilities,
-        {
-            workspace = {
-                didChangeWatchedFiles = {
-                    dynamicRegistration = true,
-                },
-            },
-        }
-    ),
-    on_attach = on_attach -- configure your on attach config
+require("lspconfig").clangd.setup({
+  on_attach = function()
+     -- do stuff here....
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
+    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, {})
+    vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, {})
+  end
 })

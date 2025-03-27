@@ -1,5 +1,4 @@
 -- Telescope
--- Still not sourcing this when in after/plugin -_-
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>t', builtin.find_files, {})
 vim.keymap.set('n', '<leader>r', builtin.oldfiles, {})
