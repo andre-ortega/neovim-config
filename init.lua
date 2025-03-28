@@ -14,7 +14,7 @@ hi! TabLineFill ctermfg=black ctermbg=NONE cterm=NONE
 hi! TabLineSel ctermfg=black ctermbg=green cterm=NONE
 
 hi! Search ctermbg=green ctermfg=black cterm=NONE
-hi! IncSearch ctermbg=magenta ctermfg=black cterm=NONE
+hi! IncSearch ctermbg=yellow ctermfg=black cterm=NONE
 
 hi! ColorColumn ctermbg=black
 hi! Visual ctermfg=black ctermbg=magenta
