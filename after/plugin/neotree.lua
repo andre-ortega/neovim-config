@@ -8,6 +8,7 @@ require('neo-tree').setup({
       hide_gitignore = false
     },
     window = {
+      position = right,
       mappings = {
         ["-"] = "navigate_up",
         ["h"] = "navigate_up",
