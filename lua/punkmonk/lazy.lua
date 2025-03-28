@@ -12,7 +12,7 @@
 --                   █       █       █
 --                               2025 PUNKMONK --
 
--- TODO: ADD HOOK 4 SECRET WORD
+-- TODO: ADD HOOK FOR 4 LETTER WORD
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -51,12 +51,12 @@ require("lazy").setup({
       local logo = [[
        ███     ███     ███
         ███     ███     ███
- ╔══════╗ ██═══╗ ╔██═══╗  ██═══╗    ╔═╗   ╔═╗
- ║ ╔════╝╔╝██═╗╚╗║ ██═╗╚╗╔╝██═╗╚╗   ║ ║   ║ ║
- ║ ╚════╗║ ╚██╝ ║║ ╚██╝╔╝║ ╚██╝ ║   ║ ║   ║ ║
- ╚════╗ ║║ ╔═██ ║║ ╔═██╚╗║ ╔═██ ║   ╚╗╚╗ ╔╝╔╝
- ╔════╝ ║║ ║  ██║║ ║  ██║║ ║  ██║    ╚╗╚═╝╔╝
- ╚══════╝╚═╝  ╚██╚═╝  ╚██╚═╝  ╚██     ╚═══╝
+  ══════  ██═══   ██════╗ ██═══     ╔═╗   ╔═╗
+ ║  ════   ██═   ║ ██═╗    ██═╗     ║ ║   ║ ║
+ ║  ════ ║  ██  ║║  ██╝ ║║ ╚██╝ ║   ║ ║   ║ ║
+  ════  ║║  ═██ ║║  ═██  ║ ╔═██ ║   ╚╗╚╗ ╔╝╔╝
+  ════  ║║ ║  ██║║ ║  ██║║ ║  ██║    ╚╗╚═╝╔╝
+  ══════  ═    ██ ═   ╚██ ═    ██     ╚═══╝
                 ██      ██      ██
                  █       █       █
                   █       █       █
@@ -162,6 +162,14 @@ require("lazy").setup({
         lsp_doc_border = true,
       },
     },
-  },
+    dependencies = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
+      "rcarriga/nvim-notify",
+    }
+  }
 })
 
