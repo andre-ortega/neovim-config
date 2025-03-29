@@ -49,21 +49,21 @@ rt.setup({
 
 
 vim.diagnostic.config({
---  virtual_text = true,
---  update_in_insert = false,
---  underline = true,
---  severity_sort = false,
---	open_float = true,
---  float = {
---    border = 'rounded',
---    source = 'always',
---    header = '',
---    prefix = '',
---    format = function(diagnostic)
---      return string.format("[%s] %s", diagnostic.source, diagnostic.message)
---    end,
---    position = "top",
---  },
+  virtual_text = false,
+  update_in_insert = false,
+  underline = false,
+  severity_sort = false,
+	open_float = true,
+--float = {
+--  border = 'rounded',
+--  source = 'always',
+--  header = '',
+--  prefix = '',
+--  format = function(diagnostic)
+--    return string.format("[%s] %s", diagnostic.source, diagnostic.message)
+--  end,
+--  position = "top",
+--},
   signs = {
     text = {
       [vim.diagnostic.severity.ERROR] = '',
@@ -129,9 +129,6 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protoc
 require("lspconfig").clangd.setup({
   on_attach = on_attach
 })
-
-
-
 
 -- defaults
 require 'corn'.setup {
