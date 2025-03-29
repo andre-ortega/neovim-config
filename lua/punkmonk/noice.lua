@@ -38,6 +38,6 @@ require("notify").setup({
   long_message_to_split = true,
   highlights = {
     border = "NotifyBorder"
-  }
+  },
 })
 
