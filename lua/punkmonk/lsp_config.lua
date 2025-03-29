@@ -10,7 +10,7 @@ local on_attach = function(_, _)
   vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, {})
   vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, {})
   vim.keymap.set('n', 'K', vim.lsp.buf.hover , {})
-  vim.keymap.set('n', '<leader>f', vim.diagnostic.open_float , {})
+--vim.keymap.set('n', '<leader>f', vim.diagnostic.open_float , { noremap = true, silent = true })
 end
 
 -- FOR REFERENCE
@@ -47,19 +47,6 @@ rt.setup({
   },
 })
 
----- LSP Diagnostics Options Setup 
---local sign = function(opts)
---  vim.fn.sign_define(opts.name, {
---    texthl = opts.name,
---    text = opts.text,
---    numhl = ''
---  })
---end
---
---sign({name = 'DiagnosticSignError', text = ''})
---sign({name = 'DiagnosticSignWarn', text = ''})
---sign({name = 'DiagnosticSignHint', text = ''})
---sign({name = 'DiagnosticSignInfo', text = ''})
 
 vim.diagnostic.config({
   virtual_text = false,
@@ -72,6 +59,10 @@ vim.diagnostic.config({
     source = 'always',
     header = '',
     prefix = '',
+    format = function(diagnostic)
+      return string.format("[%s] %s", diagnostic.source, diagnostic.message)
+    end,
+    position = "top",
   },
   signs = {
     text = {
@@ -89,9 +80,10 @@ vim.diagnostic.config({
   },
 })
 
+
 vim.cmd([[
-set signcolumn=yes
-autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
+  set signcolumn=yes
+  autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
 
 --Set completeopt to have a better completion experience
