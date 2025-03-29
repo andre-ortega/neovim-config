@@ -4,12 +4,13 @@ require("mason-lspconfig").setup({
 })
 
 local on_attach = function(_, _)
-  vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
   vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action , {})
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
   vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, {})
   vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, {})
+  vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, {})
   vim.keymap.set('n', 'K', vim.lsp.buf.hover , {})
+  vim.keymap.set('n', '<leader>f', vim.diagnostic.open_float , {})
 end
 
 -- FOR REFERENCE
@@ -62,7 +63,6 @@ rt.setup({
 
 vim.diagnostic.config({
     virtual_text = false,
-    signs = true,
     update_in_insert = true,
     underline = true,
     severity_sort = false,
@@ -102,15 +102,15 @@ autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 -- updatetime: set updatetime for CursorHold
 vim.opt.completeopt = {'menuone', 'noselect', 'noinsert'}
 vim.opt.shortmess = vim.opt.shortmess + { c = true}
-vim.api.nvim_set_option('updatetime', 300) 
+vim.api.nvim_set_option('updatetime', 300)
 
 -- Fixed column for diagnostics to appear
 -- Show autodiagnostic popup on cursor hover_range
 -- Goto previous / next diagnostic warning / error 
 -- Show inlay_hints more frequently 
 vim.cmd([[
-set signcolumn=yes
-autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
+	set signcolumn=yes
+	autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
 
 -- FLOATING WINDOW BORDERS
@@ -140,11 +140,6 @@ local _border = "single"
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 require("lspconfig").clangd.setup({
-  on_attach = function()
-     -- do stuff here....
-    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
-    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, {})
-    vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, {})
-  end
+  on_attach = on_attach
 })
 

@@ -24,8 +24,8 @@ vim.keymap.set("i", "(<cr>","(<cr>)<c-o><s-o>")
 vim.keymap.set("i", "[<cr>","[<cr>]<c-o><s-o>")
 
 -- neotree
-vim.keymap.set("n", "<leader>e", ":Neotree focus position=right<cr>" )
-vim.keymap.set("n", "<leader><cr>", ":Neotree toggle position=right<cr>" )
-vim.keymap.set("n", "<leader><leader>", ":Neotree toggle position=right<cr>")
-vim.keymap.set("n", "<leader>b", ":Neotree toggle show buffers right<cr>")
+vim.keymap.set("n", "<leader>e", ":Neotree focus position=float<cr>" )
+vim.keymap.set("n", "<leader><cr>", ":Neotree toggle position=float<cr>" )
+vim.keymap.set("n", "<leader><leader>", ":Neotree toggle position=float<cr>")
+vim.keymap.set("n", "<leader>b", ":Neotree toggle show buffers float<cr>")
 
