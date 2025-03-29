@@ -62,30 +62,31 @@ rt.setup({
 --sign({name = 'DiagnosticSignInfo', text = ''})
 
 vim.diagnostic.config({
-    virtual_text = false,
-    update_in_insert = true,
-    underline = true,
-    severity_sort = false,
-    float = {
-        border = 'rounded',
-        source = 'always',
-        header = '',
-        prefix = '',
+  virtual_text = false,
+  update_in_insert = false,
+  underline = true,
+  severity_sort = false,
+	open_float = true,
+  float = {
+    border = 'rounded',
+    source = 'always',
+    header = '',
+    prefix = '',
+  },
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = 'x',
+      [vim.diagnostic.severity.WARN] = '!',
+      [vim.diagnostic.severity.HINT] = '',
+      [vim.diagnostic.severity.INFO] = '',
     },
-    signs = {
-        text = {
-            [vim.diagnostic.severity.ERROR] = 'x',
-            [vim.diagnostic.severity.WARN] = '!',
-            [vim.diagnostic.severity.HINT] = '',
-            [vim.diagnostic.severity.INFO] = '',
-        },
-        linehl = {
-            [vim.diagnostic.severity.ERROR] = 'ErrorMsg',
-        },
-        numhl = {
-            [vim.diagnostic.severity.WARN] = 'WarningMsg',
-        },
+    linehl = {
+      [vim.diagnostic.severity.ERROR] = 'ErrorMsg',
     },
+    numhl = {
+      [vim.diagnostic.severity.WARN] = 'WarningMsg',
+    },
+  },
 })
 
 vim.cmd([[
