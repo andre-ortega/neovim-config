@@ -10,7 +10,7 @@ local on_attach = function(_, _)
   vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, {})
   vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, {})
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-  vim.keymap.set('n', '<leader>x', vim.diagnostic.open_float, {})
+  vim.keymap.set('n', '<leader>k', vim.diagnostic.open_float, {})
 end
 
 -- FOR REFERENCE
@@ -49,42 +49,36 @@ rt.setup({
 
 
 vim.diagnostic.config({
-  virtual_text = true,
-  update_in_insert = false,
-  underline = true,
-  severity_sort = false,
-	open_float = true,
-  float = {
-    border = 'rounded',
-    source = 'always',
-    header = '',
-    prefix = '',
-    format = function(diagnostic)
-      return string.format("[%s] %s", diagnostic.source, diagnostic.message)
-    end,
-    position = "top",
-  },
+--  virtual_text = true,
+--  update_in_insert = false,
+--  underline = true,
+--  severity_sort = false,
+--	open_float = true,
+--  float = {
+--    border = 'rounded',
+--    source = 'always',
+--    header = '',
+--    prefix = '',
+--    format = function(diagnostic)
+--      return string.format("[%s] %s", diagnostic.source, diagnostic.message)
+--    end,
+--    position = "top",
+--  },
   signs = {
     text = {
-      [vim.diagnostic.severity.ERROR] = 'x',
-      [vim.diagnostic.severity.WARN] = '!',
-      [vim.diagnostic.severity.HINT] = '',
+      [vim.diagnostic.severity.ERROR] = '',
+      [vim.diagnostic.severity.WARN] = '',
+      [vim.diagnostic.severity.HINT] = '',
       [vim.diagnostic.severity.INFO] = '',
     },
-    linehl = {
-      [vim.diagnostic.severity.ERROR] = 'ErrorMsg',
-    },
-    numhl = {
-      [vim.diagnostic.severity.WARN] = 'WarningMsg',
-    },
+--    linehl = {
+--      [vim.diagnostic.severity.ERROR] = 'ErrorMsg',
+--    },
+--    numhl = {
+--      [vim.diagnostic.severity.WARN] = 'WarningMsg',
+--    },
   },
 })
-
-
-vim.cmd([[
-  set signcolumn=yes
-  autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
-]])
 
 --Set completeopt to have a better completion experience
 -- :help completeopt
@@ -103,7 +97,7 @@ vim.api.nvim_set_option('updatetime', 300)
 -- Show inlay_hints more frequently 
 vim.cmd([[
 	set signcolumn=yes
-	autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
+" autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
 
 -- FLOATING WINDOW BORDERS
@@ -136,3 +130,57 @@ require("lspconfig").clangd.setup({
   on_attach = on_attach
 })
 
+
+
+
+-- defaults
+require 'corn'.setup {
+  -- enables plugin auto commands
+  auto_cmds = true,
+
+  -- sorts diagnostics according to a criteria. must be one of `severity`, `severity_reverse`, `column`, `column_reverse`, `line_number` or `line_number_reverse`
+  sort_method = 'severity',
+
+  -- sets the scope to be searched for diagnostics, must be one of `line` or `file`
+  scope = 'line',
+
+  -- sets the style of the border, must be one of `single`, `double`, `rounded`, `solid`, `shadow` or `none`
+  border_style = 'single',
+
+  -- sets which vim modes corn isn't allowed to render in, should contain strings like 'n', 'i', 'v', 'V' .. etc
+  blacklisted_modes = {},
+
+  -- sets which severity corn isn't allowed to render in, should contain diagnostic severities like:
+  -- vim.diagnostic.severity.HINT
+  -- vim.diagnostic.severity.INFO
+  -- vim.diagnostic.severity.WARN
+  -- vim.diagnostic.severity.ERROR
+  blacklisted_severities = {},
+
+  -- highlights to use for each diagnostic severity level
+  highlights = {
+    error = "DiagnosticFloatingError",
+    warn = "DiagnosticFloatingWarn",
+    info = "DiagnosticFloatingInfo",
+    hint = "DiagnosticFloatingHint",
+  },
+
+  -- icons to use for each diagnostic severity level
+  icons = {
+    error = "",
+    warn = "",
+    hint = "",
+    info = "",
+  },
+
+  -- a preprocessor function that takes a raw Corn.Item and returns it after modification, could be used for truncation or other purposes
+  item_preprocess_func = function(item)
+    -- the default truncation logic is here ...
+    return item
+  end,
+
+  -- a hook that executes each time corn is toggled. the current state is provided via `is_hidden`
+  on_toggle = function(is_hidden)
+    -- custom logic goes here
+  end,
+}
