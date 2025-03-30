@@ -1,6 +1,6 @@
 require("punkmonk")
 
--- This has to be DUPLICATED here ( for now ) or it stops working fml
+-- This has to be DUPLICATED here ( for now ) or it stops working fmlmao
 vim.cmd([[
 
 autocmd FileType * set formatoptions-=ro
@@ -60,8 +60,7 @@ vim.api.nvim_set_hl(0, "NormalFloat", { ctermfg="white", ctermbg="black" })
 vim.api.nvim_set_hl(0, "FloatTitle", { ctermfg="green", ctermbg="black" })
 vim.api.nvim_set_hl(0, "FloatFooter", { ctermfg="green", ctermbg="black" })
 
+-- noice
 vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorder", { ctermfg="green", ctermbg="none" })
---vim.api.nvim_set_hl(0, "NoiceCmdlinePrompt", { ctermfg="green", ctermbg="none" })
 vim.api.nvim_set_hl(0, "NoiceCmdlineIcon", { ctermfg="green", ctermbg="none" })
---vim.api.nvim_set_hl(0, "NotifyBorder", { ctermfg="green", ctermbg="black" })
 

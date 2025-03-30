@@ -15,20 +15,29 @@ require("noice").setup({
 --  inc_rename = false, -- enables an input dialog for inc-rename.nvim
 --  lsp_doc_border = true, -- add a border to hover docs and signature help
   },
--- break long notifications into splits, show all messages
   routes = {
+-- break long notifications into splits
     {
       filter = {
         event = "notify",
         min_height = 2
       },
-      view = 'split'
+      view = "split"
     },
+-- break long messages into split (:hi)
+    {
+      filter = {
+        event = "msg_show",
+        min_height = 10
+      },
+      view = "split"
+    },
+-- show all messages
     {
       filter = {
         event = "msg_show",
       },
-      view = 'notify'
+      view = "notify"
     },
   },
 })
@@ -43,7 +52,10 @@ require("notify").setup({
   lsp_doc_border = true,
   long_message_to_split = true,
   highlights = {
-    border = "NotifyBorder"
+    border = "NotifyBorder",
+--  title = 
+--  icon =
+--  body = "Pmenu"
   },
 })
 

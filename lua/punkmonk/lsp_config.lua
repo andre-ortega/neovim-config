@@ -54,6 +54,8 @@ vim.diagnostic.config({
   underline = false,
   severity_sort = false,
 	open_float = true,
+
+--            Popup Diagnostics Border configuration
 --float = {
 --  border = 'rounded',
 --  source = 'always',
@@ -64,6 +66,7 @@ vim.diagnostic.config({
 --  end,
 --  position = "top",
 --},
+
   signs = {
     text = {
       [vim.diagnostic.severity.ERROR] = '',

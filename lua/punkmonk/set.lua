@@ -74,7 +74,7 @@ set background=light
 hi! LineNr gui=NONE ctermfg=yellow "links LineNrAbove, LineNrBelow    
 hi! CursorLineNr gui=NONE ctermbg=blue
 hi! Statement gui=NONE ctermfg=blue " links Conditional, Repeat, Label, Operator, Keyword, Exception
-" Whatever. It's fixed.
+" Hardcoding colors to force back into colorscheme. Whatever. It's fixed.
 
 " Neotree
 hi! NeoTreeNormal ctermfg=green ctermbg=none
