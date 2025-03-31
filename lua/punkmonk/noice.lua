@@ -32,7 +32,44 @@ require("noice").setup({
       },
       view = "split"
     },
--- show all messages
+-- suppress mode messages
+    {
+      filter = {
+        event = "msg_showmode",
+        find = "INSERT",
+      },
+      opts = { skip = true },
+    },
+    {
+      filter = {
+        event = "msg_showmode",
+        find = "REPLACE",
+      },
+      opts = { skip = true },
+    },
+    {
+      filter = {
+        event = "msg_showmode",
+        find = "VISUAL",
+      },
+      opts = { skip = true },
+    },
+-- show when @recording (by show all other showmode messages)
+    {
+      filter = {
+        event = "msg_showmode"
+      },
+      view = "notify",
+    },
+-- show search_count in miniview
+    {
+      filter = {
+        event = "msg_show",
+        kind = "search_count",
+      },
+      view = "mini",
+    },
+-- show all messages (last)
     {
       filter = {
         event = "msg_show",
@@ -58,4 +95,3 @@ require("notify").setup({
 --  body = "Pmenu"
   },
 })
-
