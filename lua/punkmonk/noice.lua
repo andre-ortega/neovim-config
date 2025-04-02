@@ -68,6 +68,13 @@ require("noice").setup({
       },
       view = "mini"
     },
+    {
+      filter = {
+        event = "msg_show",
+        find = "Pattern not found",
+      },
+      view = "mini"
+    },
 -- suppress mode messages
     {
       filter = {
