@@ -77,9 +77,9 @@ hi! Statement gui=NONE ctermfg=blue " links Conditional, Repeat, Label, Operator
 " Hardcoding colors to force back into colorscheme. Whatever. It's fixed.
 
 " Neotree
-hi! NeoTreeNormal ctermfg=green ctermbg=none
-hi! NeoTreeNormalNC ctermfg=green ctermbg=none
-hi! NeoTreeEndOfBuffer ctermfg=green ctermbg=none
+hi! NeoTreeNormal ctermfg=green ctermbg=black
+hi! NeoTreeNormalNC ctermfg=green ctermbg=black
+hi! NeoTreeEndOfBuffer ctermfg=green ctermbg=black
 
 " Don't open folds when navigating with { and }
 set foldopen -=block

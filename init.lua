@@ -61,6 +61,7 @@ vim.api.nvim_set_hl(0, "FloatTitle", { ctermfg="green", ctermbg="black" })
 vim.api.nvim_set_hl(0, "FloatFooter", { ctermfg="green", ctermbg="black" })
 
 -- noice
-vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorder", { ctermfg="green", ctermbg="none" })
-vim.api.nvim_set_hl(0, "NoiceCmdlineIcon", { ctermfg="green", ctermbg="none" })
+vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorder", { ctermfg="white", ctermbg="none" })
+vim.api.nvim_set_hl(0, "NoiceCmdlineIcon", { ctermfg="white", ctermbg="none" })
+vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorderInput", { ctermfg="red", ctermbg="none" })
 

@@ -32,6 +32,42 @@ require("noice").setup({
       },
       view = "split"
     },
+-- send 'undo' messages to mini
+    {
+      filter = {
+        event = "msg_show",
+        find = "fewer lines",
+      },
+      view = "mini"
+    },
+    {
+      filter = {
+        event = "msg_show",
+        find = "line less",
+      },
+      view = "mini"
+    },
+    {
+      filter = {
+        event = "msg_show",
+        find = "more line",
+      },
+      view = "mini"
+    },
+    {
+      filter = {
+        event = "msg_show",
+        find = "Already at newest change",
+      },
+      view = "mini"
+    },
+    {
+      filter = {
+        event = "msg_show",
+        find = "Already at oldest change",
+      },
+      view = "mini"
+    },
 -- suppress mode messages
     {
       filter = {
