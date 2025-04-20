@@ -75,6 +75,20 @@ require("noice").setup({
       },
       view = "mini"
     },
+    {
+      filter = {
+        event = "msg_show",
+        find = "change; before",
+      },
+      view = "mini"
+    },
+    {
+      filter = {
+        event = "msg_show",
+        find = "change; after",
+      },
+      view = "mini"
+    },
 -- suppress mode messages
     {
       filter = {
