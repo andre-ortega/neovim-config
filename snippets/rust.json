@@ -1,0 +1,17 @@
+{
+  "println": {
+    "prefix": "pri",
+    "body": "println!(\"$1\");",
+    "description": "print line"
+  },
+  "main": {
+    "prefix": "main",
+    "body": "#include <stdio.h>\n#include <stdlib.j>\n\nint main(int argc, char* argv[]) {\n\n\t$1\n\treturn 0;\n}",
+    "description": "main program"
+  },
+  "function": {
+    "prefix": "fu",
+    "body": "fn $1 {\n$2\n}",
+    "description": "main program"
+  }
+}
