@@ -69,3 +69,10 @@ vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorderInput", { ctermfg="red", ctermbg=
 vim.api.nvim_set_hl(0, "NoicePopup", { ctermfg="yellow", ctermbg="none" })
 vim.api.nvim_set_hl(0, "NoicePopupBorder", { ctermfg="yellow", ctermbg="none" })
 
+vim.api.nvim_set_hl(0, "lualine_b_diff_added_normal", { ctermfg="yellow", ctermbg="none" })
+vim.api.nvim_set_hl(0, "lualine_b_diff_added_insert", { ctermfg="yellow", ctermbg="none" })
+vim.api.nvim_set_hl(0, "lualine_b_diff_added_visual", { ctermfg="yellow", ctermbg="none" })
+vim.api.nvim_set_hl(0, "lualine_b_diff_added_replace", { ctermfg="yellow", ctermbg="none" })
+vim.api.nvim_set_hl(0, "lualine_b_diff_added_command", { ctermfg="yellow", ctermbg="none" })
+vim.api.nvim_set_hl(0, "lualine_b_diff_added_terminal", { ctermfg="yellow", ctermbg="none" })
+vim.api.nvim_set_hl(0, "lualine_b_diff_added_inactive", { ctermfg="yellow", ctermbg="none" })

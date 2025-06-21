@@ -131,7 +131,7 @@ require("noice").setup({
       filter = {
         event = "msg_show",
       },
-      view = "notify"
+      view = "mini"
     },
   },
 })

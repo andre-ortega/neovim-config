@@ -53,7 +53,7 @@ vim.diagnostic.config({
   virtual_text = false,
   update_in_insert = false,
   underline = false,
-  severity_sort = false,
+  severity_sort = true,
 	open_float = true,
 
 --            Popup Diagnostics Border configuration
@@ -102,6 +102,8 @@ vim.api.nvim_set_option('updatetime', 300)
 vim.cmd([[
 	set signcolumn=yes
 " autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
+" autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()
+" autocmd CursorHoldI * silent! lua vim.lsp.buf.signature_help()
 ]])
 
 -- FLOATING WINDOW BORDERS
@@ -109,7 +111,7 @@ vim.cmd([[
 -- Thanks.
 -- https://vi.stackexchange.com/questions/39074/user-borders-around-lsp-floating-windows
 
-local _border = "single"
+--local _border = "single"
 
 --vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
 --  vim.lsp.handlers.hover, {
