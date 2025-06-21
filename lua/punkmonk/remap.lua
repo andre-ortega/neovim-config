@@ -16,8 +16,8 @@ vim.cmd('abb al Alpha')
 vim.keymap.set("n", "<leader>n", ":noh<cr>")
 
 -- Spawn newlines above/below
-vim.keymap.set("n", "<leader>O", "O<Esc>j")
-vim.keymap.set("n", "<leader>o", "o<Esc>k")
+vim.keymap.set("n", "<leader>O", "O<Esc>j0")
+vim.keymap.set("n", "<leader>o", "o<Esc>k0")
 
 vim.keymap.set("i", "{<cr>","{<cr>}<c-o><s-o>")
 vim.keymap.set("i", "(<cr>","(<cr>)<c-o><s-o>")

@@ -6,7 +6,7 @@
   },
   "main": {
     "prefix": "main",
-    "body": "#include <stdio.h>\n#include <stdlib.j>\n\nint main(int argc, char* argv[]) {\n\n\t$1\n\treturn 0;\n}",
+    "body": "use std::io\n\nfn main() {\t\n\t$1println!(\"Hello world!\");\n}",
     "description": "main program"
   },
   "function": {

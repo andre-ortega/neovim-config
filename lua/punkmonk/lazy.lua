@@ -171,9 +171,6 @@ require("lazy").setup({
     }
   },
   {
-    'RaafatTurki/corn.nvim'
-  },
-  {
     'mrcjkb/rustaceanvim',
     version = '^6', -- Recommended
     lazy = false, -- This plugin is already lazy
