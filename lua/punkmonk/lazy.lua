@@ -131,8 +131,7 @@ require("lazy").setup({
   {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
-    "simrat39/rust-tools.nvim"
+    "neovim/nvim-lspconfig"
   },
   {
     "hrsh7th/nvim-cmp",
@@ -173,6 +172,11 @@ require("lazy").setup({
   },
   {
     'RaafatTurki/corn.nvim'
+  },
+  {
+    'mrcjkb/rustaceanvim',
+    version = '^6', -- Recommended
+    lazy = false, -- This plugin is already lazy
   }
 })
 
