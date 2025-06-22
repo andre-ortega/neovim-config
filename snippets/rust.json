@@ -13,5 +13,10 @@
     "prefix": "fu",
     "body": "fn $1 {\n$2\n}",
     "description": "main program"
+  },
+  "string": {
+    "prefix": "S",
+    "body": "String::from(\"$1\")",
+    "description": "String"
   }
 }
