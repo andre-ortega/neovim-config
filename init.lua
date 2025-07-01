@@ -17,7 +17,7 @@ hi! Search ctermbg=green ctermfg=black cterm=NONE
 hi! IncSearch ctermbg=yellow ctermfg=black cterm=NONE
 
 hi! ColorColumn ctermbg=black
-hi! Visual ctermfg=black ctermbg=red
+hi! Visual ctermfg=black ctermbg=magenta
 
 hi! link SignColumn Normal
 
