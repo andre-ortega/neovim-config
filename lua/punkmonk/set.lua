@@ -62,6 +62,8 @@ hi! FoldColumn ctermfg=green ctermbg=black guifg=black guibg=black
 hi! StatusLine ctermfg=green ctermbg=NONE cterm=NONE
 hi! ErrorMsg ctermfg=magenta ctermbg=black
 
+hi! Comment ctermfg=cyan ctermbg=NONE
+
 "set tabline="ctermfg=green ctermbg=black %T"
 
 " This is to simply disable BOLD fonts within nvim
