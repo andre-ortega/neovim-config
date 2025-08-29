@@ -8,11 +8,6 @@ autocmd FileType * set formatoptions-=ro
 hi! clear
 colorscheme vim
 
-" hi! TabLine ctermfg=black ctermbg=black cterm=NONE
-hi! TabLine ctermfg=green ctermbg=NONE cterm=NONE
-hi! TabLineFill ctermfg=black ctermbg=NONE cterm=NONE
-hi! TabLineSel ctermfg=black ctermbg=green cterm=NONE
-
 hi! Search ctermbg=green ctermfg=black cterm=NONE
 hi! IncSearch ctermbg=magenta ctermfg=black cterm=NONE
 
@@ -36,13 +31,11 @@ hi! ErrorMsg ctermfg=magenta ctermbg=black
 
 hi! Comment ctermfg=cyan ctermbg=NONE
 
-"set tabline="ctermfg=green ctermbg=black %T"
-
 " This is to simply disable BOLD fonts within nvim
 " .. because bold items are impossible to configure in highlight
 " Setting background=light seems to fix BUT changes the colors of 
 " other items to COLORS OUTSIDE COLORSCHEME :[
-" reddit.com/neovim/comments/nnwfvp/why_is_neovim_rendering_fonts_in_different_weight
+" reddit.com/r/neovim/comments/nnwfvp/why_is_neovim_rendering_fonts_in_different_weight
 set background=light
 
 hi! LineNr gui=NONE ctermfg=yellow "links LineNrAbove, LineNrBelow    
@@ -61,6 +54,10 @@ vim.api.nvim_set_hl(0, "FloatBorder", { ctermbg="black", ctermfg="white" })
 vim.api.nvim_set_hl(0, "NormalFloat", { ctermfg="white", ctermbg="black" })
 vim.api.nvim_set_hl(0, "FloatTitle", { ctermfg="green", ctermbg="black" })
 vim.api.nvim_set_hl(0, "FloatFooter", { ctermfg="green", ctermbg="black" })
+
+vim.api.nvim_set_hl(0, "TabLine", { ctermfg=2, ctermbg="none" })
+vim.api.nvim_set_hl(0, "TabLineFill", { ctermfg="black", ctermbg="none" })
+vim.api.nvim_set_hl(0, "TabLineSel", { ctermfg="black", ctermbg=2 })
 
 -- noice
 vim.api.nvim_set_hl(0, "NoiceCmdlineIcon", { ctermfg="red", ctermbg="none" })
