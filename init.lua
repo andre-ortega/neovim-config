@@ -60,10 +60,13 @@ vim.api.nvim_set_hl(0, "TabLineFill", { ctermfg="black", ctermbg="none" })
 vim.api.nvim_set_hl(0, "TabLineSel", { ctermfg="black", ctermbg=2 })
 
 -- noice
-vim.api.nvim_set_hl(0, "NoiceCmdlineIcon", { ctermfg="red", ctermbg="none" })
-vim.api.nvim_set_hl(0, "NoiceCmdlineIconInput", { ctermfg="red", ctermbg="none" })
-vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorder", { ctermfg="red", ctermbg="none" })
-vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorderInput", { ctermfg="red", ctermbg="none" })
+vim.api.nvim_set_hl(0, "NoiceCmdlineIcon", { ctermfg=2, ctermbg="none" })
+vim.api.nvim_set_hl(0, "NoiceCmdlineIconInput", { ctermfg=2, ctermbg="none" })
+vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorder", { ctermfg=2, ctermbg="none" })
+vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorderInput", { ctermfg=5, ctermbg="none" })
+
+vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorderSearch", { ctermfg=1, ctermbg="none" })
+vim.api.nvim_set_hl(0, "NoiceCmdlineIconSearch", { ctermfg=1, ctermbg="none" })
 
 vim.api.nvim_set_hl(0, "NoicePopup", { ctermfg="yellow", ctermbg="none" })
 vim.api.nvim_set_hl(0, "NoicePopupBorder", { ctermfg="yellow", ctermbg="none" })
