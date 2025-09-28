@@ -20,7 +20,6 @@ vim.keymap.set("n", "<leader>O", "O<Esc>j0")
 vim.keymap.set("n", "<leader>o", "o<Esc>k0")
 
 -- typewriter newline
-vim.keymap.set("n", "<leader>o", "o<Esc>k0")
 vim.keymap.set("n", "<leader>;", "bhi<cr><Esc>>>A")
 
 vim.keymap.set("i", "{<cr>","{<cr>}<c-o><s-o>")

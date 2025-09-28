@@ -11,7 +11,7 @@ colorscheme vim
 hi! Search ctermbg=green ctermfg=black cterm=NONE
 hi! IncSearch ctermbg=magenta ctermfg=black cterm=NONE
 
-hi! ColorColumn ctermbg=black
+hi! ColorColumn ctermbg=0
 hi! Visual ctermfg=black ctermbg=magenta
 
 hi! link SignColumn Normal
@@ -40,7 +40,7 @@ set background=light
 
 hi! LineNr gui=NONE ctermfg=yellow "links LineNrAbove, LineNrBelow    
 hi! CursorLineNr gui=NONE ctermbg=blue
-hi! Statement gui=NONE ctermfg=blue " links Conditional, Repeat, Label, Operator, Keyword, Exception
+hi! Statement gui=NONE ctermfg=2 " links Conditional, Repeat, Label, Operator, Keyword, Exception
 " Whatever. It's fixed.
 
 " Neotree
