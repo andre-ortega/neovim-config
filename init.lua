@@ -1,11 +1,11 @@
 require("punkmonk")
 
--- This has to be DUPLICATED here ( for now ) or it stops working fmlmao
+-- highlights do not work in set.lua
 vim.cmd([[
 
 autocmd FileType * set formatoptions-=ro
 
-hi! clear
+" hi! clear
 colorscheme vim
 
 hi! Search ctermbg=green ctermfg=black cterm=NONE
@@ -16,12 +16,12 @@ hi! Visual ctermfg=black ctermbg=magenta
 
 hi! link SignColumn Normal
 
-hi! Type ctermfg=blue guifg=blue
-hi! MoreMsg ctermfg=blue guifg=blue
-hi! preproc  ctermfg=blue guifg=blue
-hi! specialkey ctermfg=green guifg=green
-hi! underlined ctermfg=green guifg=green
-hi! question ctermfg=green guifg=green
+" hi! Type ctermfg=blue guifg=blue
+" hi! MoreMsg ctermfg=blue guifg=blue
+" hi! preproc  ctermfg=blue guifg=blue
+" hi! specialkey ctermfg=green guifg=green
+" hi! underlined ctermfg=green guifg=green
+" hi! question ctermfg=green guifg=green
 
 hi! Folded ctermfg=grey ctermbg=black guifg=grey guibg=black
 hi! FoldColumn ctermfg=grey ctermbg=black guifg=grey guibg=black
@@ -36,12 +36,19 @@ hi! Comment ctermfg=cyan ctermbg=NONE
 " Setting background=light seems to fix BUT changes the colors of 
 " other items to COLORS OUTSIDE COLORSCHEME :[
 " reddit.com/r/neovim/comments/nnwfvp/why_is_neovim_rendering_fonts_in_different_weight
+" Whatever. It's fixed.
 set background=light
 
-hi! LineNr gui=NONE ctermfg=yellow "links LineNrAbove, LineNrBelow    
+hi! LineNr gui=NONE ctermfg=11 "links LineNrAbove, LineNrBelow
 hi! CursorLineNr gui=NONE ctermbg=blue
 hi! Statement gui=NONE ctermfg=2 " links Conditional, Repeat, Label, Operator, Keyword, Exception
-" Whatever. It's fixed.
+
+" editing for gruvbox
+hi! Conditional gui=NONE ctermfg=3 " if else switch case
+hi! Operator gui=NONE ctermfg=3 " + - = != etc.
+hi! Keyword gui=NONE ctermfg=1 " return, const
+hi! Repeat gui=NONE ctermfg=3 " for while
+" hi! Identifier gui=NONE ctermfg=2 " for while
 
 " Neotree
 hi! NeoTreeNormal ctermfg=green ctermbg=none

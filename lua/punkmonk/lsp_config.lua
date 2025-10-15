@@ -3,16 +3,6 @@ require("mason-lspconfig").setup({
   ensure_installed = { "lua_ls", "autotools_ls", "clangd", "basedpyright" }
 })
 
-local on_attach = function(_, _)
-  vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action , {})
-  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
-  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, {})
-  vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, {})
-  vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, {})
-  vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-  vim.keymap.set('n', '<leader>k', vim.diagnostic.open_float, {})
-end
-
 -- FOR REFERENCE
 --nnoremap <buffer> K <cmd>lua vim.lsp.buf.hover()<cr>
 --nnoremap <buffer> gd <cmd>lua vim.lsp.buf.definition()<cr>
@@ -25,14 +15,28 @@ end
 --nnoremap <buffer> <F4> <cmd>lua vim.lsp.buf.code_action()<cr>
 --xnoremap <buffer> <F4> <cmd>lua vim.lsp.buf.range_code_action()<cr>
 
+local on_attach = function(_, _)
+  vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action , {})
+  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
+  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, {})
+  vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, {})
+  vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, {})
+  vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
+  vim.keymap.set('n', '<leader>k', vim.diagnostic.open_float, {})
+end
+
 --" Diagnostics
 --nnoremap <buffer> gl <cmd>lua vim.diagnostic.open_float()<cr>
 --nnoremap <buffer> [d <cmd>lua vim.diagnostic.goto_prev()<cr>
 --nnoremap <buffer> ]d <cmd>lua vim.diagnostic.goto_next()<cr>
 
-require("lspconfig").lua_ls.setup {
-  on_attach = on_attach
-}
+--require("lspconfig").lua_ls.setup {
+--  on_attach = on_attach
+--}
+
+--vim.lsp.config('setup', {
+--  on_attach = on_attach
+--})
 
 vim.diagnostic.config({
   virtual_text = false,
@@ -117,6 +121,6 @@ vim.cmd([[
 -- An example nvim-lspconfig capabilities setting
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-require("lspconfig").clangd.setup({
-  on_attach = on_attach
-})
+--require("lspconfig").clangd.setup({
+--  on_attach = on_attach
+--})

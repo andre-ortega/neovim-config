@@ -33,31 +33,7 @@ vim.cmd([[
 
 autocmd FileType * set formatoptions-=ro
 
-hi! clear
-colorscheme vim
-
-hi! Search ctermbg=green ctermfg=black cterm=NONE
-hi! IncSearch ctermbg=magenta ctermfg=black cterm=NONE
-
-hi! ColorColumn ctermbg=0
-hi! Visual ctermfg=black ctermbg=magenta
-
-hi! link SignColumn Normal
-
-hi! Type ctermfg=blue guifg=blue
-hi! MoreMsg ctermfg=blue guifg=blue
-hi! preproc  ctermfg=blue guifg=blue
-hi! specialkey ctermfg=green guifg=green
-hi! underlined ctermfg=green guifg=green
-hi! question ctermfg=green guifg=green
-
-hi! Folded ctermfg=grey ctermbg=black guifg=grey guibg=black
-hi! FoldColumn ctermfg=grey ctermbg=black guifg=grey guibg=black
-
-hi! StatusLine ctermfg=green ctermbg=NONE cterm=NONE
-hi! ErrorMsg ctermfg=magenta ctermbg=black
-
-hi! Comment ctermfg=cyan ctermbg=NONE
+" hi! clear
 
 " This is to simply disable BOLD fonts within nvim
 " .. because bold items are impossible to configure in highlight
@@ -66,26 +42,11 @@ hi! Comment ctermfg=cyan ctermbg=NONE
 " reddit.com/r/neovim/comments/nnwfvp/why_is_neovim_rendering_fonts_in_different_weight
 set background=light
 
-hi! LineNr gui=NONE ctermfg=yellow "links LineNrAbove, LineNrBelow    
-hi! CursorLineNr gui=NONE ctermbg=blue
-hi! Statement gui=NONE ctermfg=2 " links Conditional, Repeat, Label, Operator, Keyword, Exception
-" Hardcoding colors to force back into colorscheme. Whatever. It's fixed.
-
-" Neotree
-hi! NeoTreeNormal ctermfg=green ctermbg=black
-hi! NeoTreeNormalNC ctermfg=green ctermbg=black
-hi! NeoTreeEndOfBuffer ctermfg=green ctermbg=black
-
 " Don't open folds when navigating with { and }
 set foldopen -=block
 " set so=999
 set so=5
 ]])
-
-vim.api.nvim_set_hl(0, "FloatBorder", { ctermbg="white", ctermfg="white" })
-vim.api.nvim_set_hl(0, "NormalFloat", { ctermfg="white", ctermbg="black" })
-vim.api.nvim_set_hl(0, "FloatTitle", { ctermfg="green", ctermbg="black" })
-vim.api.nvim_set_hl(0, "FloatFooter", { ctermfg="green", ctermbg="black" })
 
 vim.filetype.add({
   pattern = {
