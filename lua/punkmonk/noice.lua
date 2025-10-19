@@ -28,7 +28,8 @@ require("noice").setup({
     {
       filter = {
         event = "msg_show",
-        min_height = 10
+-- experimental --
+        min_height = 3
       },
       view = "split"
     },
