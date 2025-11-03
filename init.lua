@@ -8,7 +8,7 @@ autocmd FileType * set formatoptions-=ro
 " hi! clear
 colorscheme vim
 
-hi! Search ctermbg=green ctermfg=black cterm=NONE
+hi! Search ctermbg=2 ctermfg=black cterm=NONE
 hi! IncSearch ctermbg=magenta ctermfg=black cterm=NONE
 
 hi! ColorColumn ctermbg=0
