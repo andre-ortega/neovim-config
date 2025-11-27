@@ -12,8 +12,8 @@ vim.cmd('abb al Alpha')
 --vim.keymap.set("n", "<leader>p", [[:set ft=python<CR>]], { noremap = true, silent = true })
 --vim.keymap.set("n", "<leader>j", [[:set ft=javascript<CR>]], { noremap = true, silent = true })
 
--- Clear search
-vim.keymap.set("n", "<leader>n", ":noh<cr>")
+-- Clear search with crtl-l instead!!
+--vim.keymap.set("n", "<leader>n", ":noh<cr>")
 
 -- Spawn newlines above/below
 vim.keymap.set("n", "<leader>O", "O<Esc>j0")
