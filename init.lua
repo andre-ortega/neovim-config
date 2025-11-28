@@ -55,6 +55,13 @@ hi! NeoTreeNormal ctermfg=green ctermbg=none
 hi! NeoTreeNormalNC ctermfg=green ctermbg=none
 hi! NeoTreeEndOfBuffer ctermfg=green ctermbg=none
 
+" Possible color fixes and debugging options
+" set t_Co=256
+" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+" tears in the rain
+set notermguicolors
 ]])
 
 vim.api.nvim_set_hl(0, "FloatBorder", { ctermbg="black", ctermfg="white" })
@@ -85,3 +92,4 @@ vim.api.nvim_set_hl(0, "lualine_b_diff_added_replace", { ctermfg="yellow", cterm
 vim.api.nvim_set_hl(0, "lualine_b_diff_added_command", { ctermfg="yellow", ctermbg="none" })
 vim.api.nvim_set_hl(0, "lualine_b_diff_added_terminal", { ctermfg="yellow", ctermbg="none" })
 vim.api.nvim_set_hl(0, "lualine_b_diff_added_inactive", { ctermfg="yellow", ctermbg="none" })
+
