@@ -61,6 +61,7 @@ hi! NeoTreeEndOfBuffer ctermfg=green ctermbg=none
 " let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " tears in the rain
+" https://vi.stackexchange.com/questions/45129/is-neovim-able-to-use-terminal-profile-colors
 set notermguicolors
 ]])
 
