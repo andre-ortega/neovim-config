@@ -30,6 +30,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   'nvim-treesitter/nvim-treesitter',
+  'nvim-treesitter/nvim-treesitter-context',
   'nvim-lualine/lualine.nvim',
   {
     "nvim-neo-tree/neo-tree.nvim",
@@ -169,6 +170,9 @@ require("lazy").setup({
   },
   {
     'ThePrimeagen/harpoon'
+  },
+  {
+    'mbbill/undotree'
   }
 })
 

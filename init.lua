@@ -45,9 +45,10 @@ hi! Statement gui=NONE ctermfg=2 " links Conditional, Repeat, Label, Operator, K
 
 " editing for gruvbox
 hi! Conditional gui=NONE ctermfg=3 " if else switch case
-hi! Operator gui=NONE ctermfg=3 " + - = != etc.
+hi! Operator gui=NONE ctermfg=4 " + - = != etc.
 hi! Keyword gui=NONE ctermfg=1 " return, const
 hi! Repeat gui=NONE ctermfg=3 " for while
+hi! Function gui=NONE ctermfg=green " for while
 " hi! Identifier gui=NONE ctermfg=2 " for while
 
 " Neotree
