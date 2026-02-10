@@ -44,4 +44,5 @@ map({ "i", "s" }, "<S-tab>", function()
 end, {expr = true})
 
 -- undotree
-vim.keymap.set("n", '<leader>p', ":UndotreeToggle<cr>")
+vim.keymap.set("n", '<leader>u', ":UndotreeToggle<cr>")
+vim.keymap.set("n", '<leader>t', ":TSContext toggle<cr>")
