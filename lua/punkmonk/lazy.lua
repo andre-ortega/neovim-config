@@ -31,7 +31,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  'nvim-treesitter/nvim-treesitter',
+  {
+    'nvim-treesitter/nvim-treesitter',
+    lazy = false,
+    build = ':TSUpdate'
+  },
   'nvim-treesitter/nvim-treesitter-context',
   'nvim-lualine/lualine.nvim',
   {

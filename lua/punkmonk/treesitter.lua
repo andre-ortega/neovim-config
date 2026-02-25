@@ -1,17 +1,23 @@
 -- Treesitter Plugin Setup 
-require('nvim-treesitter.configs').setup {
-  ensure_installed = { "lua", "rust", "toml", "markdown", "markdown_inline", "c", "python", "html", "css", "javascript", "json" },
-  auto_install = true,
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting=false,
-  },
-  ident = { enable = true },
-  rainbow = {
-    enable = true,
-    extended_mode = true,
-    max_file_lines = nil,
-  }
+-- require('nvim-treesitter.configs').setup {
+--   ensure_installed = { "lua", "rust", "toml", "markdown", "markdown_inlinej, "c", "python", "html", "css", "javascript", "json" },
+--   auto_install = true,
+--   highlight = {
+--     enable = true,
+--     additional_vim_regex_highlighting=false,
+--   },
+--   ident = { enable = true },
+--   rainbow = {
+--     enable = true,
+--     extended_mode = true,
+--     max_file_lines = nil,
+--   }
+-- }
+
+require'nvim-treesitter'.setup {
+  -- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
+  install_dir = vim.fn.stdpath('data') .. '/site',
+  ensure_installed = { "lua", "rust", "toml", "markdown", "markdown_inlinej", "c", "python", "html", "css", "javascript", "json" },
 }
 
 vim.filetype.add({
