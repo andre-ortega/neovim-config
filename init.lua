@@ -95,3 +95,4 @@ vim.api.nvim_set_hl(0, "lualine_b_diff_added_command", { ctermfg="yellow", cterm
 vim.api.nvim_set_hl(0, "lualine_b_diff_added_terminal", { ctermfg="yellow", ctermbg="none" })
 vim.api.nvim_set_hl(0, "lualine_b_diff_added_inactive", { ctermfg="yellow", ctermbg="none" })
 
+vim.api.nvim_set_hl(0, "TelescopeSelection", { ctermfg="cyan", ctermbg="none" })
