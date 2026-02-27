@@ -12,7 +12,7 @@ hi! Search ctermbg=2 ctermfg=black cterm=NONE
 hi! IncSearch ctermbg=magenta ctermfg=black cterm=NONE
 
 hi! ColorColumn ctermbg=0
-hi! Visual ctermfg=black ctermbg=magenta
+hi! Visual ctermfg=black ctermbg=5
 
 hi! link SignColumn Normal
 
@@ -48,13 +48,13 @@ hi! Conditional gui=NONE ctermfg=3 " if else switch case
 hi! Operator gui=NONE ctermfg=4 " + - = != etc.
 hi! Keyword gui=NONE ctermfg=1 " return, const
 hi! Repeat gui=NONE ctermfg=3 " for while
-hi! Function gui=NONE ctermfg=green " for while
+hi! Function gui=NONE ctermfg=2 " for while
 " hi! Identifier gui=NONE ctermfg=2 " for while
 
 " Neotree
-hi! NeoTreeNormal ctermfg=green ctermbg=none
-hi! NeoTreeNormalNC ctermfg=green ctermbg=none
-hi! NeoTreeEndOfBuffer ctermfg=green ctermbg=none
+hi! NeoTreeNormal ctermfg=2 ctermbg=none
+hi! NeoTreeNormalNC ctermfg=2 ctermbg=none
+hi! NeoTreeEndOfBuffer ctermfg=2 ctermbg=none
 
 " Possible color fixes and debugging options
 " set t_Co=256
@@ -95,4 +95,4 @@ vim.api.nvim_set_hl(0, "lualine_b_diff_added_command", { ctermfg="yellow", cterm
 vim.api.nvim_set_hl(0, "lualine_b_diff_added_terminal", { ctermfg="yellow", ctermbg="none" })
 vim.api.nvim_set_hl(0, "lualine_b_diff_added_inactive", { ctermfg="yellow", ctermbg="none" })
 
-vim.api.nvim_set_hl(0, "TelescopeSelection", { ctermfg="cyan", ctermbg="none" })
+vim.api.nvim_set_hl(0, "TelescopeSelection", { ctermfg=6, ctermbg="none" })
