@@ -48,8 +48,8 @@ set foldopen -=block
 set so=5
 ]])
 
-vim.filetype.add({
-  pattern = {
-    ['*.ejs'] = 'html',
-  },
-})
+--vim.filetype.add({
+--  pattern = {
+--    ['*.ejs'] = 'html',
+--  },
+--})

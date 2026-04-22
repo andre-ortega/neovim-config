@@ -135,10 +135,18 @@ require("lazy").setup({
      }
   },
   {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig"
+    "mason-org/mason-lspconfig.nvim",
+    opts = {},
+    dependencies = {
+        { "mason-org/mason.nvim", opts = {} },
+        "neovim/nvim-lspconfig",
+    },
   },
+--{
+--  "williamboman/mason.nvim",
+--  "williamboman/mason-lspconfig.nvim",
+--  "neovim/nvim-lspconfig"
+--},
   {
     "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-nvim-lsp",
@@ -160,22 +168,6 @@ require("lazy").setup({
 --    'nvim-tree/nvim-web-devicons',     -- optional
 --  }
 --},
-  {
-    "folke/noice.nvim",
---  opts = {
---    presets = {
---      lsp_doc_border = true,
---    },
---  },
-    dependencies = {
-      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-      "MunifTanjim/nui.nvim",
-      -- OPTIONAL:
-      --   `nvim-notify` is only needed, if you want to use the notification view.
-      --   If not available, we use `mini` as the fallback
-      "rcarriga/nvim-notify",
-    }
-  },
   {
     'mrcjkb/rustaceanvim',
     version = '^6', -- Recommended

@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls", "autotools_ls", "clangd", "basedpyright" }
+  ensure_installed = { "lua_ls", "autotools_ls", "clangd", "basedpyright", "arduino_language_server" }
 })
 
 -- FOR REFERENCE
