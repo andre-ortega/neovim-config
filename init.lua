@@ -66,6 +66,8 @@ hi! NeoTreeEndOfBuffer ctermfg=2 ctermbg=none
 set notermguicolors
 ]])
 
+vim.api.nvim_set_hl(0, "Pmenu", { ctermbg="black", ctermfg="white" })
+
 vim.api.nvim_set_hl(0, "FloatBorder", { ctermbg="black", ctermfg="white" })
 vim.api.nvim_set_hl(0, "NormalFloat", { ctermfg="white", ctermbg="black" })
 vim.api.nvim_set_hl(0, "FloatTitle", { ctermfg="green", ctermbg="black" })

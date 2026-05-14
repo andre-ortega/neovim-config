@@ -8,5 +8,10 @@
     "prefix": "main",
     "body": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(int argc, char* argv[]) {\n\n\t$1\n\treturn 0;\n}",
     "description": "main program"
+  },
+  "err": {
+    "prefix": "err",
+    "body": "char err[128];\nsprintf(err, \"$1\", );\ncrit(err);",
+    "description": "err"
   }
 }
