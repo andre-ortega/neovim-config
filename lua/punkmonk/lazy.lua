@@ -1,21 +1,4 @@
 
---        ███     ███     ███
---         ███     ███     ███
---  ╔══════╗ ██═══╗ ╔██═══╗  ██═══╗    ╔═╗   ╔═╗
---  ║ ╔════╝╔╝██═╗╚╗║ ██═╗╚╗╔╝██═╗╚╗   ║ ║   ║ ║
---  ║ ╚════╗║ ╚██╝ ║║ ╚██╝╔╝║ ╚██╝ ║   ║ ║   ║ ║
---  ╚════╗ ║║ ╔═██ ║║ ╔═██╚╗║ ╔═██ ║   ╚╗╚╗ ╔╝╔╝
---  ╔════╝ ║║ ║  ██║║ ║  ██║║ ║  ██║    ╚╗╚═╝╔╝
---  ╚══════╝╚═╝  ╚██╚═╝  ╚██╚═╝  ╚██     ╚═══╝
---                 ██      ██      ██
---                  █       █       █
---                   █       █       █
---                               2025 PUNKMONK --
---            █
--- ██████████ ████████████████████
--- █        █                     ██
--- ██████████ ████████████████████████
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   vim.fn.system({
@@ -142,11 +125,6 @@ require("lazy").setup({
         "neovim/nvim-lspconfig",
     },
   },
---{
---  "williamboman/mason.nvim",
---  "williamboman/mason-lspconfig.nvim",
---  "neovim/nvim-lspconfig"
---},
   {
     "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-nvim-lsp",
@@ -158,16 +136,6 @@ require("lazy").setup({
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-look",
   },
---{
--- 'nvimdev/lspsaga.nvim',
---  config = function()
---      require('lspsaga').setup({})
---  end,
---  dependencies = {
---    'nvim-treesitter/nvim-treesitter', -- optional
---    'nvim-tree/nvim-web-devicons',     -- optional
---  }
---},
   {
     'mrcjkb/rustaceanvim',
     version = '^6', -- Recommended
