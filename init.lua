@@ -86,3 +86,11 @@ vim.api.nvim_set_hl(0, "lualine_b_diff_added_terminal", { ctermfg="yellow", cter
 vim.api.nvim_set_hl(0, "lualine_b_diff_added_inactive", { ctermfg="yellow", ctermbg="none" })
 
 vim.api.nvim_set_hl(0, "TelescopeSelection", { ctermfg=6, ctermbg="none" })
+
+vim.api.nvim_set_hl(0, "IblScope", { ctermbg=0, ctermfg=1 })
+--vim.api.nvim_set_hl(0, "IblWhitespace", { ctermbg=5, ctermfg=5 })
+vim.api.nvim_set_hl(0, "IblIndent", { ctermfg=0 })
+vim.api.nvim_command('IBLToggle')
+vim.api.nvim_command('IBLToggle')
+--vim.api.nvim_set_hl(0, "Whitespace", { fg="magenta", bg="magenta"})
+--vim.api.nvim_set_hl(0, "NonText", { ctermbg="magenta", ctermfg="magenta" })

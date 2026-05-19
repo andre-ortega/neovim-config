@@ -38,19 +38,28 @@ require("lazy").setup({
     init = false,
     opts = function()
       local dashboard = require("alpha.themes.dashboard")
+-- '
       local logo = [[
-████    ████    ████
- ████    ████    ████
-   ███     ███     ███
-    ███     ███     ███
-    █ ██    █ ██    █ ██
-       ██      ██      ██
-        ██      ██      ██
-         ██      ██      ██
-          ██      ██      ██
-           █       █       █
-            █       █       █
+    \\-_,_._,_-//
+   _ \\ '   ' // _
+    _ \\     // _
+     _ \\   // _
+        \\ //
+         \//
     ]]
+--    local logo = [[
+--████    ████    ████
+-- ████    ████    ████
+--   ███     ███     ███
+--    ███     ███     ███
+--    █ ██    █ ██    █ ██
+--       ██      ██      ██
+--        ██      ██      ██
+--         ██      ██      ██
+--          ██      ██      ██
+--           █       █       █
+--            █       █       █
+--  ]]
       dashboard.section.header.val = vim.split(logo, "\n")
       -- stylua: ignore
       dashboard.section.buttons.val = {
@@ -167,6 +176,13 @@ require("lazy").setup({
     keys = {
       { "<leader>gg", "<cmd>Neogit<cr>", desc = "Show Neogit UI" }
     }
+  },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    ---@module "ibl"
+    ---@type ibl.config
+    opts = {},
   }
 })
 
